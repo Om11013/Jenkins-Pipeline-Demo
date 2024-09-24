@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/OmRamani98/Jenkins-Pipeline-Demo'
+                git branch: 'main', url: 'https://github.com/Om11013/Jenkins-Pipeline-Demo.git'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     def username = 'poonjaniom895'
-                    def password = ''
+                    def password = '**********'
 
                     if (isUnix()) {
                         sh "echo ${password} | docker login -u ${username} --password-stdin"
